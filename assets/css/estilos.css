@@ -1,0 +1,196 @@
+/*
+    Projeto: Manipulador de Formas Geometricas - MFG 1.0
+    Autor: Zander J.L
+    Data de Publicação: 10/10/2022 15:52
+    Contato: dev@zantech.com.br
+    Tenologias aplicadas:
+        HTML5
+        CSS3
+        JAVASCRIPT
+    
+*/
+
+/* Fonte Googles */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Spice&display=swap');
+
+/* Definições Gerais da pagina */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilização itens do Sistema */
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #2e2e2d;
+    border-bottom: 10px solid transparent;
+    border-image: linear-gradient(to left, #ffd900, #fc0505);
+    border-image-slice: 1;
+}
+
+header h1 {
+    font-family: 'Bungee Spice', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.section-painel {
+    display: flex;
+    justify-content: center;
+
+
+}
+.section-painel-bord {
+    width: 400px;
+    margin-top: 15px;
+    height: 300px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, #bbb, #555);
+    border-image-slice: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.section-painel-control {
+    margin-top: 15px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+
+.formaQuadrado {
+    background-color: #f00;
+    border: 5px solid #6711d8;
+    width: 250px;
+    height: 250px;
+}
+.formaLosango {
+    background-color: #f00;
+    border: 5px solid #6711d8;
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg)
+}
+
+.formaRetangular {
+    background-color: #f00;
+    border: 5px solid #6711d8;
+    width: 250px;
+    height: 150px;
+}
+.formaCirculo {
+    background-color: #f00;
+    border: 5px solid #6711d8;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.formaTriagulo{
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 250px solid #F00;
+    border-top: 0px solid transparent;
+}
+
+.section-painel-control .formas {
+    display: flex;
+    justify-content: center;
+}
+
+.section-painel-control .formas img{
+    width: 50px;
+    margin-right: 5px;
+}
+
+.section-painel-control .formas img:active{
+    box-shadow: 2px 2px 10px #f00;
+}
+.section-painel-control .formas span{
+    flex: 1;
+}
+.section-painel-control .formas img{
+    flex:0;
+}
+pre {
+    font-weight: bold;
+}
+
+b {
+    color: #F00;
+}
+.section-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.section-area label {
+    font-size: 20px;
+    font-weight: bold;
+}
+.section-area img {
+    width: 35px;
+    cursor: pointer;
+}
+
+.section-area-class {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-area-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-area-class--conteudo,
+.section-area-style--conteudo {
+ width: 300px;
+ height: 200px;
+ border: 2px solid #555;
+}
+
+footer {
+    margin-top: 80px;
+    padding-top: 20px;
+    text-align: center;
+    border-top: 10px solid transparent;
+    border-image: linear-gradient(to left, #ffd900, #fc0505);
+    border-image-slice: 1;
+    font-weight: 600;
+}
+footer a{
+    text-decoration: none;
+}
+@media (max-width:1086px) {
+    .section-painel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-painel-control .formas {
+        flex-direction: column;
+    }
+    .section-painel-control .formas span{
+        flex: 1;
+    }
+    .section-painel-control .formas img{
+        flex:1;
+    }
+    .section-area {
+        flex-direction: column;
+    }
+    .section-area-class {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+}

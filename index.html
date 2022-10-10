@@ -1,0 +1,98 @@
+<!--
+    Projeto: Manipulador de Formas Geometricas - MFG 1.0
+    Autor: Zander J.L
+    Data de Publicação: 10/10/2022 15:52
+    Tenologias aplicadas:
+        HTML5
+        CSS3
+        JAVASCRIPT
+    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos.css" />
+    <title>Sistema de Manipular Objetos</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Formas Geometricas</h1>
+    </header>
+
+    <section class="section-painel">
+        <div class="section-painel-bord">
+            <div id="forma-geometrica"></div>
+        </div>
+
+        <div class="section-painel-control">
+            <h2>Painel de controle</h2>
+
+            <label class="formas">
+                <span>Formas padrões:</span>
+                <label>
+                    <img src="assets/img/quadrado.png" onclick="addQuadrado()"/>
+                    <img src="assets/img/retangulo.png" onclick="addRetangulo()"/>
+                    <img src="assets/img/losango.png" onclick="addLosango()"/>
+                    <img src="assets/img/triangulo.png" onclick="addTriangulo()"/>
+                    <img src="assets/img/circlo.png" onclick="addCirculo()"/>
+                </label>
+            </label>
+            
+            <pre>Dimensões Personalizadas</pre>
+            <label>
+                <span>Largura:</span>
+                <input type="number" name="largura" id="largura" maxlength="3" size="3" /> formato: Entre 0 a 250 (px)
+            </label>
+
+            <label>
+                <span>Altura:</span>
+                <input type="number" name="altura" id="altura" maxlength="3" size="3" /> formato: Entre 0 a 250 (px)
+            </label>
+
+            <label>
+                <span>Base:</span>
+                <input type="number" name="base" id="base" maxlength="3" size="3" /> formato: Entre 0 a 250 (px)
+            </label>
+            
+            <label>
+                <span>Arrendodar Objeto:</span>
+                <input type="text" name="arrendodar" id="arrendodar" onkeypress="arrendodarObj(event)"/> formato: %
+            </label>
+
+            <label>
+                <span>Rotacionar:</span>
+                <input type="number" name="rotacao" id="rotacao" maxlength="3" size="3" /> formato: 0 a 360 (Graus)
+            </label>
+            
+            <button onclick="addPersonalizada()">Aplicar Dimensoes Personalizadas</button>
+            <b>***Para criação personalizada de triangulos a opção CAMPO "LARGURA" é ignorado</b>
+            
+                        
+        </div>
+    </section>
+  
+
+    <section class="section-area">
+        <textarea id="area-copy" style="position: fixed;opacity: 0;"></textarea>
+        <div class="section-area-class">
+            <label>Conteúdo do atributo Class <img src="assets/img/copy.jpg" onclick="copiaConteudo('class')"></label>
+            <div class="section-area-class--conteudo"></div>
+        </div>
+        <div class="section-area-style">
+            <label>Conteúdo do Atributo Style <img src="assets/img/copy.jpg" onclick="copiaConteudo('style')"></label>
+            <div class="section-area-style--conteudo"></div>
+        </div>
+    </section>
+
+    <footer>
+        @copyright - 2022 <a href="mailto://dev@zantech.com.br">Criado por Zander J.L</a>
+    </footer>
+
+    
+
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
